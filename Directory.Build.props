@@ -1,0 +1,16 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFrameworkNetCoreAppVersion>netcoreapp3.1</TargetFrameworkNetCoreAppVersion>
+    <TargetFrameworkNetStandardVersion>netstandard2.0</TargetFrameworkNetStandardVersion>
+
+    <!-- Microsoft.Extensions.* -->
+    <MicrosoftExtensionsPackageVersion>5.0.0</MicrosoftExtensionsPackageVersion>
+
+	<!-- Newtonsoft -->
+	<NewtonsoftPackageVersion>12.0.3</NewtonsoftPackageVersion>
+	  
+    <!--<LangVersion>8.0</LangVersion>-->
+  </PropertyGroup>
+
+</Project>

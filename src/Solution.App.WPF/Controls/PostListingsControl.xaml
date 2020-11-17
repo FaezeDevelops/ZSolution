@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Solution.App.WPF.Controls.PostListingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Solution.App.WPF.Controls"
+             mc:Ignorable="d"             
+             Name="RootControl"
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Grid Background="{StaticResource PurpleBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ItemsControl x:Name="PostsItemCotrol" Grid.Row="1" ItemsSource="{Binding PostListItems}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="10" Columns="10" HorizontalAlignment="Left" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10" >
+                        <Button  Command="{Binding ElementName=RootControl, Path=DataContext.PostListItemClickedCommand}" CommandParameter="{Binding LabelName}" BorderBrush="{x:Null}" BorderThickness="0" Background="{StaticResource PurpleBrush}">
+                            <Button.Content>
+                                <Grid>
+                                    <Rectangle Fill="White" RadiusY="10" RadiusX="10" Width="50" Height="50" >
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect BlurRadius="20" Color="White" RenderingBias="Quality" ShadowDepth="6"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <TextBlock Text="{Binding LabelValue}" VerticalAlignment="Center" TextAlignment="Center" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(TargetFrameworkNetStandardVersion)</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Solution.Domain.Services.Abstractions\Solution.Domain.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\Solution.JsonPlaceHolder.API.Client\Solution.JsonPlaceHolder.API.Client.csproj" />
+  </ItemGroup>
+
+</Project>

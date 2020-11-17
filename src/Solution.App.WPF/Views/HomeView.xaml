@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Solution.App.WPF.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Solution.App.WPF.Views"
+             xmlns:controls="clr-namespace:Solution.App.WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="750">
+    <Grid Background="{StaticResource PurpleBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <controls:PostListingsControl Grid.Row="0" DataContext="{Binding PostListingsViewModel}" />
+    </Grid>
+</UserControl>
